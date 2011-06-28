@@ -15,8 +15,8 @@ static NSMutableDictionary *caches = nil;
 
 @interface AGKRemoteImageCache() {}
 - (id)initWithName:(NSString *)name;
-@property (nonatomic, retain) AGKRemoteImageDiskCache *diskCache;
-@property (nonatomic, retain) AGKImageCache *imageCache;
+@property (nonatomic, strong) AGKRemoteImageDiskCache *diskCache;
+@property (nonatomic, strong) AGKImageCache *imageCache;
 @end
 
 @implementation AGKRemoteImageCache
@@ -31,16 +31,14 @@ static NSMutableDictionary *caches = nil;
 	if (!theCache) {
 		theCache = [[AGKRemoteImageCache alloc] initWithName:cacheName];
 		[caches setObject:theCache forKey:cacheName];
-		[theCache release];
 		AGKTrace(@"Created remote/image cache '%@'.", cacheName); 
 	}
 	return theCache;
 }
 - (id)initWithName:(NSString *)theName {
 	if ((self = [super init])) {
-        name = [theName retain];
-        diskCache = [[AGKRemoteImageDiskCache sharedCacheNamed:theName] retain];
-        imageCache = [[AGKImageCache sharedCacheNamed:theName] retain];
+        diskCache = [AGKRemoteImageDiskCache sharedCacheNamed:theName];
+        imageCache = [AGKImageCache sharedCacheNamed:theName];
 	}
 	return self;
 }

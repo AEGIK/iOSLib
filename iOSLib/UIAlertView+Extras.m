@@ -9,7 +9,7 @@
 #import "UIAlertView+Extras.h"
 
 @interface UIAlertViewExtrasDelegate : NSObject<UIAlertViewDelegate>
-@property (nonatomic, retain) NSDictionary *actions;
+@property (nonatomic, strong) NSDictionary *actions;
 @end
 
 @implementation UIAlertViewExtrasDelegate
@@ -23,16 +23,6 @@
 	}
 	[self setActions:nil];
     [alertView setDelegate:nil];
-	[self release];
-}
-
-- (void)dealloc {
-	[self setActions:nil];
-	[super dealloc];
-}
-
-- (id)autorelease {
-	return self;
 }
 
 @end
@@ -63,20 +53,16 @@
 			if (buttonAction) {
 				AlertAction actionCopy = [buttonAction copy];
 				[dict setObject:actionCopy forKey:[NSNumber numberWithInteger:index]];
-				[actionCopy release];
 			}
 			lastOtherButton = va_arg(argList, id);
 		}
 		va_end(argList);
 	}
 	if (cancelButtonTitle && cancelAction) {
-		AlertAction copy = [cancelAction copy];
-		[dict setObject:copy forKey:[NSNumber numberWithInteger:[alertView cancelButtonIndex]]];
-		[copy release];
+		[dict setObject:cancelAction forKey:[NSNumber numberWithInteger:[alertView cancelButtonIndex]]];
 	}
 	[theDelegate setActions:dict];
-	[dict release];
 	[alertView show];
-	return [alertView autorelease];
+	return alertView;
 }
 @end

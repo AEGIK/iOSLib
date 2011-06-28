@@ -67,7 +67,7 @@
 	[newLabel setShadowOffset:[self shadowOffset]];
 	[newLabel setTextAlignment:[self textAlignment]];
 	[newLabel setAdjustsFontSizeToFitWidth:[self adjustsFontSizeToFitWidth]];
-	return [newLabel autorelease];
+    return newLabel;
 }
 
 - (void)resizeVerticallyToFitContent {
@@ -99,8 +99,6 @@
     [spinner centerVertically:[view size]];
     [view addSubview:spinner];
     [view setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin];
-    [spinner release];
-    [label release];
     return view;
 }
 
@@ -120,7 +118,6 @@
     [button centerVertically:[view size]];
     [view addSubview:button];
     [view setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin];
-    [label release];
     return view;
 }
 

@@ -28,7 +28,7 @@
 		UIControlState state = [number unsignedIntValue];
 		UIImage *image = [self backgroundImageForState:state];
 		if (image) {
-			NSValue *key = [NSValue valueWithPointer:image];
+			NSValue *key = [NSValue valueWithPointer:(__bridge void *)image];
 			UIImage *stretchedImage = [convertedImages objectForKey:key];
 			if (stretchedImage == nil) {
 				stretchedImage = [image stretchableImageWithLeftCapWidth:leftCapWidth topCapHeight:topCapHeight];
@@ -39,8 +39,6 @@
 			[self setBackgroundImage:stretchedImage forState:state];
 		}
 	}
-	[array release];
-	[convertedImages release];
 }
 
 - (void)copyStateProperties:(UIButton *)otherButton state:(UIControlState)state

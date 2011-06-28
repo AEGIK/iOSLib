@@ -46,7 +46,6 @@
     [imageView setContentMode:UIViewContentModeScaleAspectFill];
     [self addSubview:imageView];
     [self setReplacementImageView:imageView];
-    [imageView release];
 }
 
 
@@ -61,7 +60,6 @@
     if ([self loadStyle] == AGKRemoteImageViewLoadStyleSpinner) {
         AGKActivitySpinnerView *spinner = [[AGKActivitySpinnerView alloc] initWithActivityIndicatorStyle:[self activityIndicatorViewStyle]];
         [self setActivityIndicatorView:spinner];
-        [spinner release];
         [spinner setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin];
         [self addSubview:spinner];
         [[self activityIndicatorView] centerInView:self];
@@ -108,7 +106,6 @@
                                      [[self replacementImageView] removeFromSuperview];
                                      [self setReplacementImageView:nil];
                                  }];
-                [fadeInView release];
                 return;
             }
             break;
@@ -127,8 +124,7 @@
 - (void)setLoadedImage:(UIImage *)newLoadedImage 
 {
     if (loadedImage == newLoadedImage) return;
-    [loadedImage release];
-    loadedImage = [newLoadedImage retain];
+    loadedImage = newLoadedImage;
     [self setNeedsDisplay];
 }
 
@@ -149,9 +145,9 @@
     CGFloat width = [self borderWidth];
     CGFloat radius = [self cornerRadius];
     AGKImage *overlay = [self overlay];
-    return [[^(AGKImage *image) {
+    return ^(AGKImage *image) {
         return [image imageWithSize:size border:width borderColor:border cornerRadius:radius overlay:overlay];
-    } copy] autorelease];
+    };
 }
 
 - (NSString *)suffix
@@ -161,8 +157,7 @@
 }
 
 - (void)updateURL:(NSString *)theURL {
-    [replacementImage release];
-    replacementImage = [loadedImage retain];
+    replacementImage = loadedImage;
     [self setURL:theURL];
 }
 
@@ -195,16 +190,9 @@
 }
 
 
-- (void)dealloc {
+- (void)dealloc 
+{
 	[handle cancel];
-    [imageURL release];
-    [borderColor release];
-    [replacementImage release];
-    [handle release];
-    [loadedImage release];
-    [replacementImageView release];
-    [activityIndicatorView release];
-	[super dealloc];
 }
 
 @end

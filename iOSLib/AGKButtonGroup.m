@@ -12,8 +12,8 @@
 @interface AGKButtonGroup()
 {
 }
-@property (nonatomic, retain, readwrite) NSMutableArray *buttons;
-@property (nonatomic, retain, readwrite) UIButton *selectedButton; 
+@property (nonatomic, strong, readwrite) NSMutableArray *buttons;
+@property (nonatomic, strong, readwrite) UIButton *selectedButton; 
 @end
 
 @implementation AGKButtonGroup
@@ -30,7 +30,7 @@
 {
     NSUInteger tag = 0;
     for (UIButton *button in [self buttons]) {
-        [button setTag:tag++];
+        [button setTag:(NSInteger)tag++];
     }
 }
 

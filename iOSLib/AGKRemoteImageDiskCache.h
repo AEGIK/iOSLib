@@ -19,7 +19,7 @@ typedef void (^AGKRemoteImageLoaded)(AGKImage *image);
 @interface AGKRemoteImageDiskCache : NSObject {}
 
 + (AGKRemoteImageDiskCache *)sharedCacheNamed:(NSString *)cacheName;
-@property (nonatomic, retain, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, assign) NSTimeInterval loadTimeout;
 @property (nonatomic, assign) NSUInteger diskCacheSize;
 - (AGKRemoteImageDiskCacheRequestHandle *)remoteImage:(NSString *)URL imageType:(AGKImageType)imageType finished:(AGKRemoteImageLoaded)block;

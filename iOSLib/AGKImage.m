@@ -24,7 +24,7 @@
 {
     if ((self = [super init])) {
         if (!imageRef) {
-            [self release];
+            self = nil;
             return nil;
         }
         CGImage = CGImageRetain(imageRef);
@@ -45,7 +45,7 @@
 + (AGKImage *)imageWithCGImage:(CGImageRef)newCGImage 
 {
     if (!newCGImage) return nil;
-    return [[[AGKImage alloc] initWithCGImage:newCGImage] autorelease];
+    return [[AGKImage alloc] initWithCGImage:newCGImage];
 }
 
 - (UIImage *)UIImage 
@@ -105,7 +105,6 @@
 - (void)dealloc 
 {
     if (CGImage) CGImageRelease(CGImage);
-    [super dealloc];
 }
 
 @end
@@ -118,7 +117,7 @@
 {
     if ((self = [super init])) {
         if (!cgColor) {
-            [self release];
+            self = nil;
             return nil;
         }
         CGColor = CGColorRetain(cgColor);
@@ -128,13 +127,12 @@
 
 + (AGKColor *)colorWithColor:(UIColor *)color 
 {
-    return [[[self alloc] initWithCGColor:[color CGColor]] autorelease];
+    return [[self alloc] initWithCGColor:[color CGColor]];
 }
 
 - (void)dealloc
 {
     CGColorRelease(CGColor);
-    [super dealloc];
 }
 
 @end

@@ -9,7 +9,6 @@
 #import "UIView+DrawMethods.h"
 #import <QuartzCore/QuartzCore.h>
 #import "NSArray+Extras.h"
-#import "NSMutableArray+Extras.h"
 
 @implementation UIView(DrawMethods)
 - (void)drawRoundedRect:(CGContextRef) context rect:(CGRect)rect radius:(CGFloat)cornerRadius

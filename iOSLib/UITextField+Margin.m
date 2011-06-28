@@ -17,7 +17,6 @@
 	UIView *leftView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, leftInset, self.bounds.size.height)];
 	[self setLeftView:leftView];
 	[self setLeftViewMode:UITextFieldViewModeAlways];
-	[leftView release];
 }
 
 @end

@@ -63,6 +63,46 @@
 		A9995BFE13BCB1E0004B8383 /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BCB13BCB1E0004B8383 /* UIView+Extras.m */; };
 		A9995BFF13BCB1E0004B8383 /* UIViewController+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BCC13BCB1E0004B8383 /* UIViewController+Extras.h */; };
 		A9995C0013BCB1E0004B8383 /* UIViewController+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BCD13BCB1E0004B8383 /* UIViewController+Extras.m */; };
+		A9995C4813BCB4EF004B8383 /* AGKFixArray.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C2013BCB4EF004B8383 /* AGKFixArray.h */; };
+		A9995C4913BCB4EF004B8383 /* AGKFixArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C2113BCB4EF004B8383 /* AGKFixArray.m */; };
+		A9995C4A13BCB4EF004B8383 /* AGKMemURLProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C2213BCB4EF004B8383 /* AGKMemURLProtocol.h */; };
+		A9995C4B13BCB4EF004B8383 /* AGKMemURLProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C2313BCB4EF004B8383 /* AGKMemURLProtocol.m */; };
+		A9995C4C13BCB4EF004B8383 /* AGKRepeatingEventCentral.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C2413BCB4EF004B8383 /* AGKRepeatingEventCentral.h */; };
+		A9995C4D13BCB4EF004B8383 /* AGKRepeatingEventCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C2513BCB4EF004B8383 /* AGKRepeatingEventCentral.m */; };
+		A9995C4E13BCB4EF004B8383 /* ArcFour.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C2613BCB4EF004B8383 /* ArcFour.h */; };
+		A9995C4F13BCB4EF004B8383 /* ArcFour.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C2713BCB4EF004B8383 /* ArcFour.m */; };
+		A9995C5013BCB4EF004B8383 /* NSObject+KVO.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C2813BCB4EF004B8383 /* NSObject+KVO.h */; };
+		A9995C5113BCB4EF004B8383 /* NSObject+KVO.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C2913BCB4EF004B8383 /* NSObject+KVO.m */; };
+		A9995C5213BCB4EF004B8383 /* NSString+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C2A13BCB4EF004B8383 /* NSString+Extras.h */; };
+		A9995C5313BCB4EF004B8383 /* NSString+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C2B13BCB4EF004B8383 /* NSString+Extras.m */; };
+		A9995C5413BCB4EF004B8383 /* NSString+Hash.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C2C13BCB4EF004B8383 /* NSString+Hash.h */; };
+		A9995C5513BCB4EF004B8383 /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C2D13BCB4EF004B8383 /* NSString+Hash.m */; };
+		A9995C5613BCB4EF004B8383 /* NSString+JSON.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C2E13BCB4EF004B8383 /* NSString+JSON.h */; };
+		A9995C5713BCB4EF004B8383 /* NSString+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C2F13BCB4EF004B8383 /* NSString+JSON.m */; };
+		A9995C5813BCB4EF004B8383 /* NSString+URLEncode.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C3013BCB4EF004B8383 /* NSString+URLEncode.h */; };
+		A9995C5913BCB4EF004B8383 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C3113BCB4EF004B8383 /* NSString+URLEncode.m */; };
+		A9995C5A13BCB4EF004B8383 /* NSURLConnection+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C3213BCB4EF004B8383 /* NSURLConnection+Extras.h */; };
+		A9995C5B13BCB4EF004B8383 /* NSURLConnection+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C3313BCB4EF004B8383 /* NSURLConnection+Extras.m */; };
+		A9995C5C13BCB4EF004B8383 /* NSXMLParser+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C3413BCB4EF004B8383 /* NSXMLParser+Extras.h */; };
+		A9995C5D13BCB4EF004B8383 /* NSXMLParser+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C3513BCB4EF004B8383 /* NSXMLParser+Extras.m */; };
+		A9995C5E13BCB4EF004B8383 /* AGK.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C3613BCB4EF004B8383 /* AGK.h */; };
+		A9995C5F13BCB4EF004B8383 /* AGK.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C3713BCB4EF004B8383 /* AGK.m */; };
+		A9995C6013BCB4EF004B8383 /* NSFileManager+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C3813BCB4EF004B8383 /* NSFileManager+Extras.h */; };
+		A9995C6113BCB4EF004B8383 /* NSFileManager+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C3913BCB4EF004B8383 /* NSFileManager+Extras.m */; };
+		A9995C6213BCB4EF004B8383 /* NSDate+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C3A13BCB4EF004B8383 /* NSDate+Extras.h */; };
+		A9995C6313BCB4EF004B8383 /* NSDate+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C3B13BCB4EF004B8383 /* NSDate+Extras.m */; };
+		A9995C6413BCB4EF004B8383 /* NSData+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C3C13BCB4EF004B8383 /* NSData+Extras.h */; };
+		A9995C6513BCB4EF004B8383 /* NSData+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C3D13BCB4EF004B8383 /* NSData+Extras.m */; };
+		A9995C6613BCB4EF004B8383 /* NSBundle+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C3E13BCB4EF004B8383 /* NSBundle+Extras.h */; };
+		A9995C6713BCB4EF004B8383 /* NSBundle+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C3F13BCB4EF004B8383 /* NSBundle+Extras.m */; };
+		A9995C6813BCB4EF004B8383 /* NSArray+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C4013BCB4EF004B8383 /* NSArray+Extras.h */; };
+		A9995C6913BCB4EF004B8383 /* NSArray+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C4113BCB4EF004B8383 /* NSArray+Extras.m */; };
+		A9995C6A13BCB4EF004B8383 /* NSDictionary+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C4213BCB4EF004B8383 /* NSDictionary+Extras.h */; };
+		A9995C6B13BCB4EF004B8383 /* NSDictionary+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C4313BCB4EF004B8383 /* NSDictionary+Extras.m */; };
+		A9995C6C13BCB4EF004B8383 /* AGKTCPConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C4413BCB4EF004B8383 /* AGKTCPConnection.h */; };
+		A9995C6D13BCB4EF004B8383 /* AGKTCPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C4513BCB4EF004B8383 /* AGKTCPConnection.m */; };
+		A9995C6E13BCB4EF004B8383 /* AGKSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C4613BCB4EF004B8383 /* AGKSecurity.h */; };
+		A9995C6F13BCB4EF004B8383 /* AGKSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C4713BCB4EF004B8383 /* AGKSecurity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +174,46 @@
 		A9995BCB13BCB1E0004B8383 /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
 		A9995BCC13BCB1E0004B8383 /* UIViewController+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extras.h"; sourceTree = "<group>"; };
 		A9995BCD13BCB1E0004B8383 /* UIViewController+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extras.m"; sourceTree = "<group>"; };
+		A9995C2013BCB4EF004B8383 /* AGKFixArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGKFixArray.h; path = "../cocoa-lib-2/CocoaLib/AGKFixArray.h"; sourceTree = "<group>"; };
+		A9995C2113BCB4EF004B8383 /* AGKFixArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGKFixArray.m; path = "../cocoa-lib-2/CocoaLib/AGKFixArray.m"; sourceTree = "<group>"; };
+		A9995C2213BCB4EF004B8383 /* AGKMemURLProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGKMemURLProtocol.h; path = "../cocoa-lib-2/CocoaLib/AGKMemURLProtocol.h"; sourceTree = "<group>"; };
+		A9995C2313BCB4EF004B8383 /* AGKMemURLProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGKMemURLProtocol.m; path = "../cocoa-lib-2/CocoaLib/AGKMemURLProtocol.m"; sourceTree = "<group>"; };
+		A9995C2413BCB4EF004B8383 /* AGKRepeatingEventCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGKRepeatingEventCentral.h; path = "../cocoa-lib-2/CocoaLib/AGKRepeatingEventCentral.h"; sourceTree = "<group>"; };
+		A9995C2513BCB4EF004B8383 /* AGKRepeatingEventCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGKRepeatingEventCentral.m; path = "../cocoa-lib-2/CocoaLib/AGKRepeatingEventCentral.m"; sourceTree = "<group>"; };
+		A9995C2613BCB4EF004B8383 /* ArcFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ArcFour.h; path = "../cocoa-lib-2/CocoaLib/ArcFour.h"; sourceTree = "<group>"; };
+		A9995C2713BCB4EF004B8383 /* ArcFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ArcFour.m; path = "../cocoa-lib-2/CocoaLib/ArcFour.m"; sourceTree = "<group>"; };
+		A9995C2813BCB4EF004B8383 /* NSObject+KVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+KVO.h"; path = "../cocoa-lib-2/CocoaLib/NSObject+KVO.h"; sourceTree = "<group>"; };
+		A9995C2913BCB4EF004B8383 /* NSObject+KVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+KVO.m"; path = "../cocoa-lib-2/CocoaLib/NSObject+KVO.m"; sourceTree = "<group>"; };
+		A9995C2A13BCB4EF004B8383 /* NSString+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Extras.h"; path = "../cocoa-lib-2/CocoaLib/NSString+Extras.h"; sourceTree = "<group>"; };
+		A9995C2B13BCB4EF004B8383 /* NSString+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Extras.m"; path = "../cocoa-lib-2/CocoaLib/NSString+Extras.m"; sourceTree = "<group>"; };
+		A9995C2C13BCB4EF004B8383 /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Hash.h"; path = "../cocoa-lib-2/CocoaLib/NSString+Hash.h"; sourceTree = "<group>"; };
+		A9995C2D13BCB4EF004B8383 /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Hash.m"; path = "../cocoa-lib-2/CocoaLib/NSString+Hash.m"; sourceTree = "<group>"; };
+		A9995C2E13BCB4EF004B8383 /* NSString+JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+JSON.h"; path = "../cocoa-lib-2/CocoaLib/NSString+JSON.h"; sourceTree = "<group>"; };
+		A9995C2F13BCB4EF004B8383 /* NSString+JSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+JSON.m"; path = "../cocoa-lib-2/CocoaLib/NSString+JSON.m"; sourceTree = "<group>"; };
+		A9995C3013BCB4EF004B8383 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "../cocoa-lib-2/CocoaLib/NSString+URLEncode.h"; sourceTree = "<group>"; };
+		A9995C3113BCB4EF004B8383 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "../cocoa-lib-2/CocoaLib/NSString+URLEncode.m"; sourceTree = "<group>"; };
+		A9995C3213BCB4EF004B8383 /* NSURLConnection+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURLConnection+Extras.h"; path = "../cocoa-lib-2/CocoaLib/NSURLConnection+Extras.h"; sourceTree = "<group>"; };
+		A9995C3313BCB4EF004B8383 /* NSURLConnection+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURLConnection+Extras.m"; path = "../cocoa-lib-2/CocoaLib/NSURLConnection+Extras.m"; sourceTree = "<group>"; };
+		A9995C3413BCB4EF004B8383 /* NSXMLParser+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSXMLParser+Extras.h"; path = "../cocoa-lib-2/CocoaLib/NSXMLParser+Extras.h"; sourceTree = "<group>"; };
+		A9995C3513BCB4EF004B8383 /* NSXMLParser+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSXMLParser+Extras.m"; path = "../cocoa-lib-2/CocoaLib/NSXMLParser+Extras.m"; sourceTree = "<group>"; };
+		A9995C3613BCB4EF004B8383 /* AGK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGK.h; path = "../cocoa-lib-2/CocoaLib/AGK.h"; sourceTree = "<group>"; };
+		A9995C3713BCB4EF004B8383 /* AGK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGK.m; path = "../cocoa-lib-2/CocoaLib/AGK.m"; sourceTree = "<group>"; };
+		A9995C3813BCB4EF004B8383 /* NSFileManager+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+Extras.h"; path = "../cocoa-lib-2/CocoaLib/NSFileManager+Extras.h"; sourceTree = "<group>"; };
+		A9995C3913BCB4EF004B8383 /* NSFileManager+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+Extras.m"; path = "../cocoa-lib-2/CocoaLib/NSFileManager+Extras.m"; sourceTree = "<group>"; };
+		A9995C3A13BCB4EF004B8383 /* NSDate+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+Extras.h"; path = "../cocoa-lib-2/CocoaLib/NSDate+Extras.h"; sourceTree = "<group>"; };
+		A9995C3B13BCB4EF004B8383 /* NSDate+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+Extras.m"; path = "../cocoa-lib-2/CocoaLib/NSDate+Extras.m"; sourceTree = "<group>"; };
+		A9995C3C13BCB4EF004B8383 /* NSData+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Extras.h"; path = "../cocoa-lib-2/CocoaLib/NSData+Extras.h"; sourceTree = "<group>"; };
+		A9995C3D13BCB4EF004B8383 /* NSData+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Extras.m"; path = "../cocoa-lib-2/CocoaLib/NSData+Extras.m"; sourceTree = "<group>"; };
+		A9995C3E13BCB4EF004B8383 /* NSBundle+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSBundle+Extras.h"; path = "../cocoa-lib-2/CocoaLib/NSBundle+Extras.h"; sourceTree = "<group>"; };
+		A9995C3F13BCB4EF004B8383 /* NSBundle+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+Extras.m"; path = "../cocoa-lib-2/CocoaLib/NSBundle+Extras.m"; sourceTree = "<group>"; };
+		A9995C4013BCB4EF004B8383 /* NSArray+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+Extras.h"; path = "../cocoa-lib-2/CocoaLib/NSArray+Extras.h"; sourceTree = "<group>"; };
+		A9995C4113BCB4EF004B8383 /* NSArray+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Extras.m"; path = "../cocoa-lib-2/CocoaLib/NSArray+Extras.m"; sourceTree = "<group>"; };
+		A9995C4213BCB4EF004B8383 /* NSDictionary+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Extras.h"; path = "../cocoa-lib-2/CocoaLib/NSDictionary+Extras.h"; sourceTree = "<group>"; };
+		A9995C4313BCB4EF004B8383 /* NSDictionary+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Extras.m"; path = "../cocoa-lib-2/CocoaLib/NSDictionary+Extras.m"; sourceTree = "<group>"; };
+		A9995C4413BCB4EF004B8383 /* AGKTCPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGKTCPConnection.h; path = "../cocoa-lib-2/CocoaLib/AGKTCPConnection.h"; sourceTree = "<group>"; };
+		A9995C4513BCB4EF004B8383 /* AGKTCPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGKTCPConnection.m; path = "../cocoa-lib-2/CocoaLib/AGKTCPConnection.m"; sourceTree = "<group>"; };
+		A9995C4613BCB4EF004B8383 /* AGKSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGKSecurity.h; path = "../cocoa-lib-2/CocoaLib/AGKSecurity.h"; sourceTree = "<group>"; };
+		A9995C4713BCB4EF004B8383 /* AGKSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGKSecurity.m; path = "../cocoa-lib-2/CocoaLib/AGKSecurity.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +243,7 @@
 		A9995B6613BCB15F004B8383 = {
 			isa = PBXGroup;
 			children = (
+				A9995C1E13BCB4DA004B8383 /* CocoaLib */,
 				A9995B7613BCB15F004B8383 /* iOSLib */,
 				A9995B8913BCB15F004B8383 /* iOSLibTests */,
 				A9995B7313BCB15F004B8383 /* Frameworks */,
@@ -272,6 +353,53 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A9995C1E13BCB4DA004B8383 /* CocoaLib */ = {
+			isa = PBXGroup;
+			children = (
+				A9995C2013BCB4EF004B8383 /* AGKFixArray.h */,
+				A9995C2113BCB4EF004B8383 /* AGKFixArray.m */,
+				A9995C2213BCB4EF004B8383 /* AGKMemURLProtocol.h */,
+				A9995C2313BCB4EF004B8383 /* AGKMemURLProtocol.m */,
+				A9995C2413BCB4EF004B8383 /* AGKRepeatingEventCentral.h */,
+				A9995C2513BCB4EF004B8383 /* AGKRepeatingEventCentral.m */,
+				A9995C2613BCB4EF004B8383 /* ArcFour.h */,
+				A9995C2713BCB4EF004B8383 /* ArcFour.m */,
+				A9995C2813BCB4EF004B8383 /* NSObject+KVO.h */,
+				A9995C2913BCB4EF004B8383 /* NSObject+KVO.m */,
+				A9995C2A13BCB4EF004B8383 /* NSString+Extras.h */,
+				A9995C2B13BCB4EF004B8383 /* NSString+Extras.m */,
+				A9995C2C13BCB4EF004B8383 /* NSString+Hash.h */,
+				A9995C2D13BCB4EF004B8383 /* NSString+Hash.m */,
+				A9995C2E13BCB4EF004B8383 /* NSString+JSON.h */,
+				A9995C2F13BCB4EF004B8383 /* NSString+JSON.m */,
+				A9995C3013BCB4EF004B8383 /* NSString+URLEncode.h */,
+				A9995C3113BCB4EF004B8383 /* NSString+URLEncode.m */,
+				A9995C3213BCB4EF004B8383 /* NSURLConnection+Extras.h */,
+				A9995C3313BCB4EF004B8383 /* NSURLConnection+Extras.m */,
+				A9995C3413BCB4EF004B8383 /* NSXMLParser+Extras.h */,
+				A9995C3513BCB4EF004B8383 /* NSXMLParser+Extras.m */,
+				A9995C3613BCB4EF004B8383 /* AGK.h */,
+				A9995C3713BCB4EF004B8383 /* AGK.m */,
+				A9995C3813BCB4EF004B8383 /* NSFileManager+Extras.h */,
+				A9995C3913BCB4EF004B8383 /* NSFileManager+Extras.m */,
+				A9995C3A13BCB4EF004B8383 /* NSDate+Extras.h */,
+				A9995C3B13BCB4EF004B8383 /* NSDate+Extras.m */,
+				A9995C3C13BCB4EF004B8383 /* NSData+Extras.h */,
+				A9995C3D13BCB4EF004B8383 /* NSData+Extras.m */,
+				A9995C3E13BCB4EF004B8383 /* NSBundle+Extras.h */,
+				A9995C3F13BCB4EF004B8383 /* NSBundle+Extras.m */,
+				A9995C4013BCB4EF004B8383 /* NSArray+Extras.h */,
+				A9995C4113BCB4EF004B8383 /* NSArray+Extras.m */,
+				A9995C4213BCB4EF004B8383 /* NSDictionary+Extras.h */,
+				A9995C4313BCB4EF004B8383 /* NSDictionary+Extras.m */,
+				A9995C4413BCB4EF004B8383 /* AGKTCPConnection.h */,
+				A9995C4513BCB4EF004B8383 /* AGKTCPConnection.m */,
+				A9995C4613BCB4EF004B8383 /* AGKSecurity.h */,
+				A9995C4713BCB4EF004B8383 /* AGKSecurity.m */,
+			);
+			name = CocoaLib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -303,6 +431,26 @@
 				A9995BFB13BCB1E0004B8383 /* UIView+DrawMethods.h in Headers */,
 				A9995BFD13BCB1E0004B8383 /* UIView+Extras.h in Headers */,
 				A9995BFF13BCB1E0004B8383 /* UIViewController+Extras.h in Headers */,
+				A9995C4813BCB4EF004B8383 /* AGKFixArray.h in Headers */,
+				A9995C4A13BCB4EF004B8383 /* AGKMemURLProtocol.h in Headers */,
+				A9995C4C13BCB4EF004B8383 /* AGKRepeatingEventCentral.h in Headers */,
+				A9995C4E13BCB4EF004B8383 /* ArcFour.h in Headers */,
+				A9995C5013BCB4EF004B8383 /* NSObject+KVO.h in Headers */,
+				A9995C5213BCB4EF004B8383 /* NSString+Extras.h in Headers */,
+				A9995C5413BCB4EF004B8383 /* NSString+Hash.h in Headers */,
+				A9995C5613BCB4EF004B8383 /* NSString+JSON.h in Headers */,
+				A9995C5813BCB4EF004B8383 /* NSString+URLEncode.h in Headers */,
+				A9995C5A13BCB4EF004B8383 /* NSURLConnection+Extras.h in Headers */,
+				A9995C5C13BCB4EF004B8383 /* NSXMLParser+Extras.h in Headers */,
+				A9995C5E13BCB4EF004B8383 /* AGK.h in Headers */,
+				A9995C6013BCB4EF004B8383 /* NSFileManager+Extras.h in Headers */,
+				A9995C6213BCB4EF004B8383 /* NSDate+Extras.h in Headers */,
+				A9995C6413BCB4EF004B8383 /* NSData+Extras.h in Headers */,
+				A9995C6613BCB4EF004B8383 /* NSBundle+Extras.h in Headers */,
+				A9995C6813BCB4EF004B8383 /* NSArray+Extras.h in Headers */,
+				A9995C6A13BCB4EF004B8383 /* NSDictionary+Extras.h in Headers */,
+				A9995C6C13BCB4EF004B8383 /* AGKTCPConnection.h in Headers */,
+				A9995C6E13BCB4EF004B8383 /* AGKSecurity.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,6 +575,26 @@
 				A9995BFC13BCB1E0004B8383 /* UIView+DrawMethods.m in Sources */,
 				A9995BFE13BCB1E0004B8383 /* UIView+Extras.m in Sources */,
 				A9995C0013BCB1E0004B8383 /* UIViewController+Extras.m in Sources */,
+				A9995C4913BCB4EF004B8383 /* AGKFixArray.m in Sources */,
+				A9995C4B13BCB4EF004B8383 /* AGKMemURLProtocol.m in Sources */,
+				A9995C4D13BCB4EF004B8383 /* AGKRepeatingEventCentral.m in Sources */,
+				A9995C4F13BCB4EF004B8383 /* ArcFour.m in Sources */,
+				A9995C5113BCB4EF004B8383 /* NSObject+KVO.m in Sources */,
+				A9995C5313BCB4EF004B8383 /* NSString+Extras.m in Sources */,
+				A9995C5513BCB4EF004B8383 /* NSString+Hash.m in Sources */,
+				A9995C5713BCB4EF004B8383 /* NSString+JSON.m in Sources */,
+				A9995C5913BCB4EF004B8383 /* NSString+URLEncode.m in Sources */,
+				A9995C5B13BCB4EF004B8383 /* NSURLConnection+Extras.m in Sources */,
+				A9995C5D13BCB4EF004B8383 /* NSXMLParser+Extras.m in Sources */,
+				A9995C5F13BCB4EF004B8383 /* AGK.m in Sources */,
+				A9995C6113BCB4EF004B8383 /* NSFileManager+Extras.m in Sources */,
+				A9995C6313BCB4EF004B8383 /* NSDate+Extras.m in Sources */,
+				A9995C6513BCB4EF004B8383 /* NSData+Extras.m in Sources */,
+				A9995C6713BCB4EF004B8383 /* NSBundle+Extras.m in Sources */,
+				A9995C6913BCB4EF004B8383 /* NSArray+Extras.m in Sources */,
+				A9995C6B13BCB4EF004B8383 /* NSDictionary+Extras.m in Sources */,
+				A9995C6D13BCB4EF004B8383 /* AGKTCPConnection.m in Sources */,
+				A9995C6F13BCB4EF004B8383 /* AGKSecurity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +743,7 @@
 				A9995B9713BCB15F004B8383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9995B9813BCB15F004B8383 /* Build configuration list for PBXNativeTarget "iOSLibTests" */ = {
 			isa = XCConfigurationList;
@@ -583,6 +752,7 @@
 				A9995B9A13BCB15F004B8383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

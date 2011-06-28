@@ -53,13 +53,11 @@
 - (void)insertSection:(NSUInteger)section withRowAnimation:(UITableViewRowAnimation)animation {
 	NSIndexSet *set = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(section, 1)];
 	[self insertSections:set withRowAnimation:animation];
-	[set release];
 }
 
 - (void)deleteSection:(NSUInteger)section withRowAnimation:(UITableViewRowAnimation)animation {
 	NSIndexSet *set = [[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(section, 1)];
 	[self deleteSections:set withRowAnimation:animation];
-	[set release];	
 }
 
 - (void)insertRow:(NSUInteger)row withRowAnimation:(UITableViewRowAnimation)animation {
@@ -69,8 +67,6 @@
 	NSIndexPath *indexPath = [[NSIndexPath alloc] initWithIndexes:path length:2];
 	NSArray *array = [[NSArray alloc] initWithObjects:indexPath, nil];
 	[self insertRowsAtIndexPaths:array withRowAnimation:animation];
-	[array release];
-	[indexPath release];
 }
 
 - (void)deleteRow:(NSUInteger)row withRowAnimation:(UITableViewRowAnimation)animation {
@@ -81,8 +77,6 @@
 	NSIndexPath *indexPath = [[NSIndexPath alloc] initWithIndexes:path length:2];
 	NSArray *array = [[NSArray alloc] initWithObjects:indexPath, nil];
 	[self deleteRowsAtIndexPaths:array withRowAnimation:animation];
-	[array release];
-	[indexPath release];
 }
 
 - (void)reloadRow:(NSUInteger)row withRowAnimation:(UITableViewRowAnimation)animation {
@@ -93,7 +87,5 @@
 	NSIndexPath *indexPath = [[NSIndexPath alloc] initWithIndexes:path length:2];
 	NSArray *array = [[NSArray alloc] initWithObjects:indexPath, nil];
 	[self reloadRowsAtIndexPaths:array withRowAnimation:animation];
-	[array release];
-	[indexPath release];
 }
 @end

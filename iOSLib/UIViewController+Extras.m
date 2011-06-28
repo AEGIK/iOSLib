@@ -19,9 +19,8 @@
 	NSString *className = NSStringFromClass([self class]);
 	NSRange range = [className rangeOfString:@"ViewController"];
 	NSAssert(range.location != NSNotFound, @"Illegal name of controller subtype");
-	id viewController = [[self alloc] initWithNibName:[className substringWithRange:NSMakeRange(0, range.location + 4)]
-											   bundle:nibBundleOrNil];
-	return [viewController autorelease];	 
+	return [[self alloc] initWithNibName:[className substringWithRange:NSMakeRange(0, range.location + 4)]
+                                  bundle:nibBundleOrNil];
 }
 
 @end

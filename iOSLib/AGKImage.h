@@ -6,7 +6,7 @@
 //  Copyright 2011 AEGIK AB. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface AGKColor : NSObject {}
 + (AGKColor *)colorWithColor:(UIColor *)color;

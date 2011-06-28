@@ -21,6 +21,6 @@
 - (void)retag;
 - (void)addTarget:(id)target action:(SEL)action forControlEvents:(UIControlEvents)controlEvents;
 
-@property (nonatomic, retain, readonly) NSMutableArray *buttons;
-@property (nonatomic, retain, readonly) UIButton *selectedButton; 
+@property (nonatomic, strong, readonly) NSMutableArray *buttons;
+@property (nonatomic, strong, readonly) UIButton *selectedButton; 
 @end

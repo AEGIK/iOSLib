@@ -58,18 +58,18 @@
 
 
 @interface AGKTextField() {}
-@property (nonatomic, retain) AGKTextFieldDelegate *innerDelegate;
+@property (nonatomic, strong) AGKTextFieldDelegate *innerDelegate;
 @end
 
 @implementation AGKTextField
 
-@synthesize innerDelegate, maxLength;
+@synthesize innerDelegate = _innerDelegate, maxLength;
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
 	if ((self = [super initWithCoder:aDecoder])) {
-        innerDelegate = [[AGKTextFieldDelegate alloc] init];
-		[innerDelegate setDelegate:[super delegate]];
-		[super setDelegate:innerDelegate];
+        _innerDelegate = [[AGKTextFieldDelegate alloc] init];
+		[_innerDelegate setDelegate:[super delegate]];
+		[super setDelegate:_innerDelegate];
 	}
 	return self;
 }
@@ -79,7 +79,6 @@
 		AGKTextFieldDelegate *theInnerDelegate = [[AGKTextFieldDelegate alloc] init];
 		[super setDelegate:theInnerDelegate];
 		[self setInnerDelegate:theInnerDelegate];
-		[theInnerDelegate release];
 	}
 	return self;
 }
@@ -91,8 +90,4 @@
 	[[self innerDelegate] setDelegate:newDelegate];
 }
 
-- (void)dealloc {
-    [innerDelegate release];
-	[super dealloc];
-}
 @end

@@ -14,5 +14,5 @@
 {}
 - (AGKImageRequestHandle *)retrieveImage:(NSString *)url suffix:(NSString *)string modifier:(AGKImageModifier)modifier load:(AGKImageCallback)block;
 + (AGKRemoteImageCache *)sharedCacheNamed:(NSString *)cacheName;
-@property (nonatomic, retain) NSString *name;
+@property (nonatomic, strong) NSString *name;
 @end

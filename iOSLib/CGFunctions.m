@@ -112,7 +112,7 @@ CGRect CGSizeAspectFill(CGSize sourceSize, CGSize destinationSize)
 CGImageRef CGImageResizeAndModifyWithBlock(CGImageRef image, CGSize size, ContextAction block)
 {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGContextRef context = CGBitmapContextCreate(NULL, size.width, size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
+    CGContextRef context = CGBitmapContextCreate(NULL, (size_t)size.width, (size_t)size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);
     CGContextSetInterpolationQuality(context, kCGInterpolationMedium);
     block(context);
     CGImageRef cgImage = CGBitmapContextCreateImage(context);
@@ -148,5 +148,5 @@ CGSize CGSizeRescaleToScreen(CGSize size)
 
 CGSize CGSizeRescale(CGSize size, CGFloat scaleFactor) 
 {
-    return CGSizeMake(round(scaleFactor * size.width), round(scaleFactor * size.height));
+    return CGSizeMake((CGFloat)round(scaleFactor * size.width), (CGFloat)round(scaleFactor * size.height));
 }

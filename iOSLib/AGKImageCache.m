@@ -13,7 +13,6 @@
 #import "NSURLConnection+Extras.h"
 #import "AGK.h"
 #import "NSArray+Extras.h"
-#import "NSMutableArray+Extras.h"
 #import "UIImage+Extras.h"
 #import "NSFileManager+Extras.h"
 #import "NSString+URLEncode.h"
@@ -27,13 +26,13 @@ static const NSUInteger MaxEntries = 200;
 @interface AGKImageRequestHandle() {}
 - (id)initWithCallback:(AGKImageCallback)theBlock;
 - (void)receivedImage:(AGKImage *)image;
-@property (nonatomic, copy) AGKImageCallback callback;
+@property (nonatomic, strong) AGKImageCallback callback;
 @end
 
 @interface AGKImageCache() {}
 - (id)initWithName:(NSString *)name;
-@property (nonatomic, retain) NSCache *cache;
-@property (nonatomic, retain) NSMutableDictionary *workingRequests;
+@property (nonatomic, strong) NSCache *cache;
+@property (nonatomic, strong) NSMutableDictionary *workingRequests;
 @property (nonatomic, assign) NSUInteger hits;
 @property (nonatomic, assign) NSUInteger coalesced;
 @property (nonatomic, assign) NSUInteger misses;
@@ -48,11 +47,10 @@ static const NSUInteger MaxEntries = 200;
 	if (!caches) {
 		caches = [[NSMutableDictionary alloc] initWithCapacity:3];
 	}
-	AGKImageCache *theCache = [caches objectForKey:cacheName];
+	AGKImageCache __strong *theCache = [caches objectForKey:cacheName];
 	if (!theCache) {
 		theCache = [[AGKImageCache alloc] initWithName:cacheName];
 		[caches setObject:theCache forKey:cacheName];
-		[theCache release];
 		AGKTrace(@"Created image cache '%@'.", cacheName); 
 	}
 	return theCache;
@@ -107,7 +105,7 @@ static const NSUInteger MaxEntries = 200;
 
 - (void)completedImage:(AGKImage *)image forKey:(NSString *)key 
 {
-    NSArray *waitingArray = [[[self workingRequests] objectForKey:key] retain];
+    NSArray *waitingArray = [[self workingRequests] objectForKey:key];
     [[self workingRequests] removeObjectForKey:key];
     if (image) {
         [[self cache] setObject:image forKey:key];
@@ -115,7 +113,6 @@ static const NSUInteger MaxEntries = 200;
     for (AGKImageRequestHandle *handle in waitingArray) {
         [handle receivedImage:image];
     }
-    [waitingArray release];
 }
 
 - (void)modifyImage:(AGKImage *)image forKey:(NSString *)key modifier:(AGKImageModifier)modifier 
@@ -162,7 +159,6 @@ static const NSUInteger MaxEntries = 200;
         if (!block) return nil;
         AGKImageRequestHandle *handle = [[AGKImageRequestHandle alloc] initWithCallback:block];
         [working addObject:handle];
-        [handle release];
         return handle;
     }
     
@@ -170,13 +166,12 @@ static const NSUInteger MaxEntries = 200;
     AGKImageRequestHandle *handle = nil;
     NSMutableArray *array;
     if (block) {
-        handle = [[[AGKImageRequestHandle alloc] initWithCallback:block] autorelease];
+        handle = [[AGKImageRequestHandle alloc] initWithCallback:block];
         array = [[NSMutableArray alloc] initWithObjects:handle, nil];
     } else {
         array = [[NSMutableArray alloc] initWithCapacity:2];
     }
     [[self workingRequests] setObject:array forKey:imageName];
-    [array release];
     imageLoader(^(AGKImage *image) {
         if (!modifier) {
             [self completedImage:image forKey:imageName];
@@ -209,12 +204,6 @@ static const NSUInteger MaxEntries = 200;
 - (void)cancel 
 {
     [self setCallback:nil];
-}
-
-- (void)dealloc 
-{
-    [callback release];
-    [super dealloc];
 }
 
 @end

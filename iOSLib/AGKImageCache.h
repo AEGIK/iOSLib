@@ -23,5 +23,5 @@ typedef AGKImage *(^AGKImageModifier)(AGKImage *image);
 - (AGKImageRequestHandle *)retrieveImage:(NSString *)imageName image:(AGKImageLoader)imageLoader modifier:(AGKImageModifier)modifier load:(AGKImageCallback)block;
 - (AGKImage *)retrieveImage:(NSString *)imageName image:(AGKImage *)image modifier:(AGKImageModifier)modifier;
 
-@property (nonatomic, retain, readonly) NSString *name;
+@property (nonatomic, strong, readonly) NSString *name;
 @end

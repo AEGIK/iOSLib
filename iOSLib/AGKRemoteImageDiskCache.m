@@ -10,7 +10,6 @@
 #import "NSURLConnection+Extras.h"
 #import "AGK.h"
 #import "NSArray+Extras.h"
-#import "NSMutableArray+Extras.h"
 #import "UIImage+Extras.h"
 #import "NSFileManager+Extras.h"
 #import "NSString+URLEncode.h"
@@ -27,10 +26,10 @@ static BOOL failAll = NO;
 #endif
 
 @interface AGKRemoteImageDiskCacheRequestHandle() {}
-- (id)initWithCache:(AGKRemoteImageDiskCache *)theCache filename:(NSString *)theFilename block:(void *)theBlockPointer;
-@property (nonatomic, retain) AGKRemoteImageDiskCache *cache;
-@property (nonatomic, assign) AGKRemoteImageLoaded blockPointer;
-@property (nonatomic, retain) NSString *filename;
+- (id)initWithCache:(AGKRemoteImageDiskCache *)theCache filename:(NSString *)theFilename block:(AGKRemoteImageLoaded)theBlock;
+@property (nonatomic, strong) AGKRemoteImageDiskCache *cache;
+@property (nonatomic, weak) AGKRemoteImageLoaded block;
+@property (nonatomic, strong) NSString *filename;
 @end
 
 @interface AGKRemoteImageDiskCache() {}
@@ -40,12 +39,12 @@ static BOOL failAll = NO;
 - (AGKRemoteImageDiskCacheRequestHandle *)loadImage:(NSString *)filename imageType:(AGKImageType)imageType finished:(AGKRemoteImageLoaded)block;
 - (AGKRemoteImageDiskCacheRequestHandle *)loadRemote:(NSString *)URL filename:(NSString *)filename imageType:(AGKImageType)imageType finished:(AGKRemoteImageLoaded)block;
 
-@property (nonatomic, retain) NSMutableSet *pendingRequests;
-@property (nonatomic, retain) NSMutableArray *diskCache;
-@property (nonatomic, retain) NSString *cacheDir;
+@property (nonatomic, strong) NSMutableSet *pendingRequests;
+@property (nonatomic, strong) NSMutableArray *diskCache;
+@property (nonatomic, strong) NSString *cacheDir;
 @property (nonatomic, assign) NSUInteger hits;
 @property (nonatomic, assign) NSUInteger misses;
-@property (nonatomic, retain) NSMutableDictionary *loading;
+@property (nonatomic, strong) NSMutableDictionary *loading;
 @property (nonatomic, assign) NSUInteger coalesced;
 @end
 
@@ -70,7 +69,6 @@ static BOOL failAll = NO;
 	if (!theCache) {
 		theCache = [[AGKRemoteImageDiskCache alloc] initWithName:cacheName];
 		[caches setObject:theCache forKey:cacheName];
-		[theCache release];
 		AGKTrace(@"Created image disk cache '%@'.", cacheName); 
 	}
 	return theCache;
@@ -78,7 +76,6 @@ static BOOL failAll = NO;
 
 - (id)initWithName:(NSString *)theName {
 	if ((self = [super init])) {
-        name = [theName retain];
 		[self setPendingRequests:[NSMutableSet setWithCapacity:10]];
         [self setDiskCacheSize:200];
         [self setCacheDir:[[NSFileManager directory:@"AGKRemoteImage" inUserDirectory:NSCachesDirectory] stringByAppendingPathComponent:name]];
@@ -95,13 +92,11 @@ static BOOL failAll = NO;
     NSError *error = [fileManager setupDirectory:[self cacheDir]];
     if (error) {
         AGKLog(@"Failed to setup remote image cache '%@' directory: %@", [self name], error);
-        [fileManager release];
         return nil;
     }
     NSArray *filesInPath = [fileManager contentsOfDirectoryAtPath:[self cacheDir] error:&error];
     if (error) {
         AGKLog(@"Failed to open remote image cache '%@' directory: %@", [self name], error);
-        [fileManager release];
         return nil;
     }
     NSMutableArray *cachedImages = [NSMutableArray arrayWithCapacity:200];
@@ -113,7 +108,6 @@ static BOOL failAll = NO;
         }
     }                 
     AGKTrace(@"Loaded %d images from disk cache for '%@'", [cachedImages count], [self name]);
-    [fileManager release];
     return cachedImages;
 }
 
@@ -160,8 +154,6 @@ static BOOL failAll = NO;
     NSString *file = [self filenameFromURL:url];
     [fileManager createFileAtPath:[[self cacheDir] stringByAppendingPathComponent:file] contents:data attributes:nil];
     [[self diskCache] addObject:file];
-    
-    [fileManager release];
 }
 
 - (AGKRemoteImageDiskCacheRequestHandle *)remoteImage:(NSString *)URL finished:(AGKRemoteImageLoaded)block 
@@ -189,11 +181,8 @@ static BOOL failAll = NO;
     NSMutableArray *waitingBlocks = [[self loading] objectForKey:filename];
     if (waitingBlocks) {
         coalesced++;
-        AGKRemoteImageLoaded copiedBlock = [block copy];
-        [waitingBlocks addObject:copiedBlock];
-        AGKRemoteImageDiskCacheRequestHandle *handle = [[AGKRemoteImageDiskCacheRequestHandle alloc] initWithCache:self filename:filename block:copiedBlock];
-        [copiedBlock release];
-        return [handle autorelease];
+        [waitingBlocks addObject:block];
+        return [[AGKRemoteImageDiskCacheRequestHandle alloc] initWithCache:self filename:filename block:block];
     }
     if ([[self diskCache] containsObject:filename]) {
         hits++;
@@ -208,20 +197,19 @@ static BOOL failAll = NO;
 
 - (AGKRemoteImageDiskCacheRequestHandle *)addLoadingBlock:(AGKRemoteImageLoaded)block filename:(NSString *)filename
 {
-    NSMutableArray *array = block ? [NSMutableArray arrayWithObject:[[block copy] autorelease]] : [NSMutableArray array];
+    NSMutableArray *array = block ? [NSMutableArray arrayWithObject:block] : [NSMutableArray array];
     [[self loading] setObject:array forKey:filename];
     if (!block) return nil;
-    return [[[AGKRemoteImageDiskCacheRequestHandle alloc] initWithCache:self filename:filename block:block] autorelease];
+    return [[AGKRemoteImageDiskCacheRequestHandle alloc] initWithCache:self filename:filename block:block];
 }
 
 - (void)sendImage:(AGKImage *)image forFile:(NSString *)filename 
 {
-    NSArray *theArray = [[[self loading] objectForKey:filename] retain];
+    NSArray *theArray = [[self loading] objectForKey:filename];
     [[self loading] removeObjectForKey:filename];
     for (AGKRemoteImageLoaded aBlock in theArray) {
         aBlock(image);
     }
-    [theArray release];
 }
 
 - (void)loadImage:(NSString *)filename imageType:(AGKImageType)imageType {
@@ -266,7 +254,6 @@ static BOOL failAll = NO;
         if (ejectedImages > 0) {
             AGKTrace(@"Cache '%@' ejected %d disk image(s)", [self name], ejectedImages);
         }       
-        [fileManager release];
         [[self diskCache] addObject:filename];
         [self loadImage:filename imageType:imageType];
     }];
@@ -277,36 +264,25 @@ static BOOL failAll = NO;
 
 
 @implementation AGKRemoteImageDiskCacheRequestHandle
-@synthesize cache, blockPointer, filename;
+@synthesize cache = _cache, block = _block, filename = _filename;
 
-- (id)initWithCache:(AGKRemoteImageDiskCache *)theCache filename:(NSString *)theFilename block:(void *)theBlockPointer 
+- (id)initWithCache:(AGKRemoteImageDiskCache *)theCache filename:(NSString *)theFilename block:(AGKRemoteImageLoaded)theBlock 
 {
     if ((self = [super init])) {
-        cache = [theCache retain];
-        blockPointer = theBlockPointer;
-        filename = [theFilename retain];
+        _cache = theCache;
+        _block = theBlock;
+        _filename = theFilename;
     }
     return self;
 }
+
 - (void)cancel 
 {
-    if (![self blockPointer]) return;
+    if (![self block]) return;
     NSMutableArray *array = [[[self cache] loading] objectForKey:[self filename]];
-    NSUInteger index = [array indexOfObject:[self blockPointer]];
-    if (index != NSNotFound) {
-        [array removeObjectAtIndex:index];
-    }
+    [array removeObject:[self block]];
     [self setCache:nil];
     [self setFilename:nil];
-    [self setBlockPointer:nil];
-}
-
-- (void)dealloc 
-{
-    blockPointer = nil;
-    [cache release];
-    [filename release];
-    [super dealloc];
 }
 
 @end

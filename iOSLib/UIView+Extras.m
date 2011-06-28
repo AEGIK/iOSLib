@@ -109,11 +109,9 @@
 }
 
 - (void)removeAllSubviews {
-	NSArray *array = [[NSArray alloc] initWithArray:[self subviews]];
-	for (UIView *view in array) {
+	for (UIView *view in [[NSArray alloc] initWithArray:[self subviews]]) {
 		[view removeFromSuperview];
 	}
-	[array release];
 }
 
 + (void)animate:(BOOL)animate withDuration:(NSTimeInterval)duration delay:(NSTimeInterval)delay options:(UIViewAnimationOptions)options animations:(void (^)())animations completion:(void (^)(BOOL))completion {
@@ -167,15 +165,15 @@
 }
 
 - (void)centerHorizontally:(CGSize)container {
-    [self setX:round((container.width - [self width]) / 2)]; 
+    [self setX:(CGFloat)round((container.width - [self width]) / 2)]; 
 }
 
 - (void)centerVertically:(CGSize)container {
-    [self setY:round((container.height - [self height]) / 2)]; 
+    [self setY:(CGFloat)round((container.height - [self height]) / 2)]; 
 }
 
 - (void)center:(CGSize)container {
-    [self setOrigin:CGPointMake(round((container.width - [self width]) / 2), round((container.height - [self height]) / 2))];
+    [self setOrigin:CGPointMake((CGFloat)round((container.width - [self width]) / 2), (CGFloat)round((container.height - [self height]) / 2))];
 }
 
 - (void)alignRight:(CGSize)container {
@@ -209,17 +207,17 @@
     CGRect frame = [self bounds];
     UIView *view = [[UIView alloc] initWithFrame:frame];
     [view setTag:0x239142];
-    [view setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.4]];
+    [view setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.4f]];
     CGSize labelSize = [text sizeWithFont:font];
     UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite];
     NSUInteger spacing = 10;
     CGFloat totalSize = [activityIndicator width] + labelSize.width + spacing;
-    CGFloat xOffset = round((frame.size.width - totalSize) / 2);
-    CGFloat yOffset = round(frame.size.height * 0.4);
+    CGFloat xOffset = (CGFloat)round((frame.size.width - totalSize) / 2);
+    CGFloat yOffset = (CGFloat)round(frame.size.height * 0.4);
     CGRect labelRect = CGRectMake(xOffset + [activityIndicator width] + spacing, 
-                                  yOffset - round(labelSize.height / 2), 
+                                  yOffset - (CGFloat)round(labelSize.height / 2), 
                                   labelSize.width + 3, labelSize.height);
-    [activityIndicator setOrigin:CGPointMake(xOffset, yOffset - round([activityIndicator height] / 2))];
+    [activityIndicator setOrigin:CGPointMake(xOffset, yOffset - (CGFloat)round([activityIndicator height] / 2))];
     UILabel *label = [[UILabel alloc] initWithFrame:labelRect];
     [label setFont:font];
     [label setText:text];
@@ -228,10 +226,7 @@
     [activityIndicator startAnimating];
     [view addSubview:activityIndicator];
     [view addSubview:label];
-    [activityIndicator release];
-    [label release];
     [self addSubview:view];
-    [view release];
 }
 
 - (id)initWithSize:(CGSize)size 
