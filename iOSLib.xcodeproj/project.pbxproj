@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9995B7513BCB15F004B8383 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9995B7413BCB15F004B8383 /* Foundation.framework */; };
+		A9995B8013BCB15F004B8383 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9995B7F13BCB15F004B8383 /* SenTestingKit.framework */; };
+		A9995B8213BCB15F004B8383 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9995B8113BCB15F004B8383 /* UIKit.framework */; };
+		A9995B8313BCB15F004B8383 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9995B7413BCB15F004B8383 /* Foundation.framework */; };
+		A9995B8513BCB15F004B8383 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9995B8413BCB15F004B8383 /* CoreGraphics.framework */; };
+		A9995B8813BCB15F004B8383 /* libiOSLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9995B7113BCB15F004B8383 /* libiOSLib.a */; };
+		A9995B8E13BCB15F004B8383 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9995B8C13BCB15F004B8383 /* InfoPlist.strings */; };
+		A9995B9013BCB15F004B8383 /* iOSLibTests.h in Resources */ = {isa = PBXBuildFile; fileRef = A9995B8F13BCB15F004B8383 /* iOSLibTests.h */; };
+		A9995B9213BCB15F004B8383 /* iOSLibTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995B9113BCB15F004B8383 /* iOSLibTests.m */; };
+		A9995BCE13BCB1E0004B8383 /* AGKActivitySpinnerView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995B9B13BCB1E0004B8383 /* AGKActivitySpinnerView.h */; };
+		A9995BCF13BCB1E0004B8383 /* AGKActivitySpinnerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995B9C13BCB1E0004B8383 /* AGKActivitySpinnerView.m */; };
+		A9995BD013BCB1E0004B8383 /* AGKButtonGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995B9D13BCB1E0004B8383 /* AGKButtonGroup.h */; };
+		A9995BD113BCB1E0004B8383 /* AGKButtonGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995B9E13BCB1E0004B8383 /* AGKButtonGroup.m */; };
+		A9995BD413BCB1E0004B8383 /* AGKImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BA113BCB1E0004B8383 /* AGKImage.h */; };
+		A9995BD513BCB1E0004B8383 /* AGKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BA213BCB1E0004B8383 /* AGKImage.m */; };
+		A9995BD613BCB1E0004B8383 /* AGKImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BA313BCB1E0004B8383 /* AGKImageCache.h */; };
+		A9995BD713BCB1E0004B8383 /* AGKImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BA413BCB1E0004B8383 /* AGKImageCache.m */; };
+		A9995BD813BCB1E0004B8383 /* AGKOutlineLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BA513BCB1E0004B8383 /* AGKOutlineLabel.h */; };
+		A9995BD913BCB1E0004B8383 /* AGKOutlineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BA613BCB1E0004B8383 /* AGKOutlineLabel.m */; };
+		A9995BDA13BCB1E0004B8383 /* AGKRemoteImageCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BA713BCB1E0004B8383 /* AGKRemoteImageCache.h */; };
+		A9995BDB13BCB1E0004B8383 /* AGKRemoteImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BA813BCB1E0004B8383 /* AGKRemoteImageCache.m */; };
+		A9995BDC13BCB1E0004B8383 /* AGKRemoteImageDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BA913BCB1E0004B8383 /* AGKRemoteImageDiskCache.h */; };
+		A9995BDD13BCB1E0004B8383 /* AGKRemoteImageDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BAA13BCB1E0004B8383 /* AGKRemoteImageDiskCache.m */; };
+		A9995BDE13BCB1E0004B8383 /* AGKRemoteImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BAB13BCB1E0004B8383 /* AGKRemoteImageView.h */; };
+		A9995BDF13BCB1E0004B8383 /* AGKRemoteImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BAC13BCB1E0004B8383 /* AGKRemoteImageView.m */; };
+		A9995BE213BCB1E0004B8383 /* AGKTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BAF13BCB1E0004B8383 /* AGKTextField.h */; };
+		A9995BE313BCB1E0004B8383 /* AGKTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BB013BCB1E0004B8383 /* AGKTextField.m */; };
+		A9995BE413BCB1E0004B8383 /* CGFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BB113BCB1E0004B8383 /* CGFunctions.h */; };
+		A9995BE513BCB1E0004B8383 /* CGFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BB213BCB1E0004B8383 /* CGFunctions.m */; };
+		A9995BE613BCB1E0004B8383 /* iOSLib.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BB313BCB1E0004B8383 /* iOSLib.h */; };
+		A9995BE713BCB1E0004B8383 /* NSIndexPath+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BB413BCB1E0004B8383 /* NSIndexPath+Extras.h */; };
+		A9995BE813BCB1E0004B8383 /* NSIndexPath+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BB513BCB1E0004B8383 /* NSIndexPath+Extras.m */; };
+		A9995BE913BCB1E0004B8383 /* UIAlertView+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BB613BCB1E0004B8383 /* UIAlertView+Extras.h */; };
+		A9995BEA13BCB1E0004B8383 /* UIAlertView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BB713BCB1E0004B8383 /* UIAlertView+Extras.m */; };
+		A9995BEB13BCB1E0004B8383 /* UIButton+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BB813BCB1E0004B8383 /* UIButton+Extras.h */; };
+		A9995BEC13BCB1E0004B8383 /* UIButton+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BB913BCB1E0004B8383 /* UIButton+Extras.m */; };
+		A9995BED13BCB1E0004B8383 /* UIColor+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BBA13BCB1E0004B8383 /* UIColor+Extras.h */; };
+		A9995BEE13BCB1E0004B8383 /* UIColor+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BBB13BCB1E0004B8383 /* UIColor+Extras.m */; };
+		A9995BEF13BCB1E0004B8383 /* UIDevice+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BBC13BCB1E0004B8383 /* UIDevice+Extras.h */; };
+		A9995BF013BCB1E0004B8383 /* UIDevice+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BBD13BCB1E0004B8383 /* UIDevice+Extras.m */; };
+		A9995BF113BCB1E0004B8383 /* UIImage+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BBE13BCB1E0004B8383 /* UIImage+Extras.h */; };
+		A9995BF213BCB1E0004B8383 /* UIImage+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BBF13BCB1E0004B8383 /* UIImage+Extras.m */; };
+		A9995BF313BCB1E0004B8383 /* UIImageView+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BC013BCB1E0004B8383 /* UIImageView+Extras.h */; };
+		A9995BF413BCB1E0004B8383 /* UIImageView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BC113BCB1E0004B8383 /* UIImageView+Extras.m */; };
+		A9995BF513BCB1E0004B8383 /* UILabel+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BC213BCB1E0004B8383 /* UILabel+Extras.h */; };
+		A9995BF613BCB1E0004B8383 /* UILabel+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BC313BCB1E0004B8383 /* UILabel+Extras.m */; };
+		A9995BF713BCB1E0004B8383 /* UITableView+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BC413BCB1E0004B8383 /* UITableView+Extras.h */; };
+		A9995BF813BCB1E0004B8383 /* UITableView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BC513BCB1E0004B8383 /* UITableView+Extras.m */; };
+		A9995BF913BCB1E0004B8383 /* UITextField+Margin.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BC613BCB1E0004B8383 /* UITextField+Margin.h */; };
+		A9995BFA13BCB1E0004B8383 /* UITextField+Margin.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BC713BCB1E0004B8383 /* UITextField+Margin.m */; };
+		A9995BFB13BCB1E0004B8383 /* UIView+DrawMethods.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BC813BCB1E0004B8383 /* UIView+DrawMethods.h */; };
+		A9995BFC13BCB1E0004B8383 /* UIView+DrawMethods.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BC913BCB1E0004B8383 /* UIView+DrawMethods.m */; };
+		A9995BFD13BCB1E0004B8383 /* UIView+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BCA13BCB1E0004B8383 /* UIView+Extras.h */; };
+		A9995BFE13BCB1E0004B8383 /* UIView+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BCB13BCB1E0004B8383 /* UIView+Extras.m */; };
+		A9995BFF13BCB1E0004B8383 /* UIViewController+Extras.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995BCC13BCB1E0004B8383 /* UIViewController+Extras.h */; };
+		A9995C0013BCB1E0004B8383 /* UIViewController+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995BCD13BCB1E0004B8383 /* UIViewController+Extras.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9995B8613BCB15F004B8383 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9995B6813BCB15F004B8383 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9995B7013BCB15F004B8383;
+			remoteInfo = iOSLib;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A9995B7113BCB15F004B8383 /* libiOSLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOSLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9995B7413BCB15F004B8383 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A9995B7813BCB15F004B8383 /* iOSLib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSLib-Prefix.pch"; sourceTree = "<group>"; };
+		A9995B7E13BCB15F004B8383 /* iOSLibTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSLibTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9995B7F13BCB15F004B8383 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A9995B8113BCB15F004B8383 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A9995B8413BCB15F004B8383 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		A9995B8B13BCB15F004B8383 /* iOSLibTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSLibTests-Info.plist"; sourceTree = "<group>"; };
+		A9995B8D13BCB15F004B8383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A9995B8F13BCB15F004B8383 /* iOSLibTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSLibTests.h; sourceTree = "<group>"; };
+		A9995B9113BCB15F004B8383 /* iOSLibTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSLibTests.m; sourceTree = "<group>"; };
+		A9995B9B13BCB1E0004B8383 /* AGKActivitySpinnerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKActivitySpinnerView.h; sourceTree = "<group>"; };
+		A9995B9C13BCB1E0004B8383 /* AGKActivitySpinnerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKActivitySpinnerView.m; sourceTree = "<group>"; };
+		A9995B9D13BCB1E0004B8383 /* AGKButtonGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKButtonGroup.h; sourceTree = "<group>"; };
+		A9995B9E13BCB1E0004B8383 /* AGKButtonGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKButtonGroup.m; sourceTree = "<group>"; };
+		A9995BA113BCB1E0004B8383 /* AGKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKImage.h; sourceTree = "<group>"; };
+		A9995BA213BCB1E0004B8383 /* AGKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKImage.m; sourceTree = "<group>"; };
+		A9995BA313BCB1E0004B8383 /* AGKImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKImageCache.h; sourceTree = "<group>"; };
+		A9995BA413BCB1E0004B8383 /* AGKImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKImageCache.m; sourceTree = "<group>"; };
+		A9995BA513BCB1E0004B8383 /* AGKOutlineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKOutlineLabel.h; sourceTree = "<group>"; };
+		A9995BA613BCB1E0004B8383 /* AGKOutlineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKOutlineLabel.m; sourceTree = "<group>"; };
+		A9995BA713BCB1E0004B8383 /* AGKRemoteImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKRemoteImageCache.h; sourceTree = "<group>"; };
+		A9995BA813BCB1E0004B8383 /* AGKRemoteImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKRemoteImageCache.m; sourceTree = "<group>"; };
+		A9995BA913BCB1E0004B8383 /* AGKRemoteImageDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKRemoteImageDiskCache.h; sourceTree = "<group>"; };
+		A9995BAA13BCB1E0004B8383 /* AGKRemoteImageDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKRemoteImageDiskCache.m; sourceTree = "<group>"; };
+		A9995BAB13BCB1E0004B8383 /* AGKRemoteImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKRemoteImageView.h; sourceTree = "<group>"; };
+		A9995BAC13BCB1E0004B8383 /* AGKRemoteImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKRemoteImageView.m; sourceTree = "<group>"; };
+		A9995BAF13BCB1E0004B8383 /* AGKTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKTextField.h; sourceTree = "<group>"; };
+		A9995BB013BCB1E0004B8383 /* AGKTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKTextField.m; sourceTree = "<group>"; };
+		A9995BB113BCB1E0004B8383 /* CGFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGFunctions.h; sourceTree = "<group>"; };
+		A9995BB213BCB1E0004B8383 /* CGFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGFunctions.m; sourceTree = "<group>"; };
+		A9995BB313BCB1E0004B8383 /* iOSLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iOSLib.h; sourceTree = "<group>"; };
+		A9995BB413BCB1E0004B8383 /* NSIndexPath+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+Extras.h"; sourceTree = "<group>"; };
+		A9995BB513BCB1E0004B8383 /* NSIndexPath+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+Extras.m"; sourceTree = "<group>"; };
+		A9995BB613BCB1E0004B8383 /* UIAlertView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Extras.h"; sourceTree = "<group>"; };
+		A9995BB713BCB1E0004B8383 /* UIAlertView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Extras.m"; sourceTree = "<group>"; };
+		A9995BB813BCB1E0004B8383 /* UIButton+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Extras.h"; sourceTree = "<group>"; };
+		A9995BB913BCB1E0004B8383 /* UIButton+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Extras.m"; sourceTree = "<group>"; };
+		A9995BBA13BCB1E0004B8383 /* UIColor+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extras.h"; sourceTree = "<group>"; };
+		A9995BBB13BCB1E0004B8383 /* UIColor+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extras.m"; sourceTree = "<group>"; };
+		A9995BBC13BCB1E0004B8383 /* UIDevice+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Extras.h"; sourceTree = "<group>"; };
+		A9995BBD13BCB1E0004B8383 /* UIDevice+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Extras.m"; sourceTree = "<group>"; };
+		A9995BBE13BCB1E0004B8383 /* UIImage+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extras.h"; sourceTree = "<group>"; };
+		A9995BBF13BCB1E0004B8383 /* UIImage+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extras.m"; sourceTree = "<group>"; };
+		A9995BC013BCB1E0004B8383 /* UIImageView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Extras.h"; sourceTree = "<group>"; };
+		A9995BC113BCB1E0004B8383 /* UIImageView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Extras.m"; sourceTree = "<group>"; };
+		A9995BC213BCB1E0004B8383 /* UILabel+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Extras.h"; sourceTree = "<group>"; };
+		A9995BC313BCB1E0004B8383 /* UILabel+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Extras.m"; sourceTree = "<group>"; };
+		A9995BC413BCB1E0004B8383 /* UITableView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Extras.h"; sourceTree = "<group>"; };
+		A9995BC513BCB1E0004B8383 /* UITableView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Extras.m"; sourceTree = "<group>"; };
+		A9995BC613BCB1E0004B8383 /* UITextField+Margin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Margin.h"; sourceTree = "<group>"; };
+		A9995BC713BCB1E0004B8383 /* UITextField+Margin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Margin.m"; sourceTree = "<group>"; };
+		A9995BC813BCB1E0004B8383 /* UIView+DrawMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DrawMethods.h"; sourceTree = "<group>"; };
+		A9995BC913BCB1E0004B8383 /* UIView+DrawMethods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DrawMethods.m"; sourceTree = "<group>"; };
+		A9995BCA13BCB1E0004B8383 /* UIView+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extras.h"; sourceTree = "<group>"; };
+		A9995BCB13BCB1E0004B8383 /* UIView+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extras.m"; sourceTree = "<group>"; };
+		A9995BCC13BCB1E0004B8383 /* UIViewController+Extras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Extras.h"; sourceTree = "<group>"; };
+		A9995BCD13BCB1E0004B8383 /* UIViewController+Extras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Extras.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9995B6E13BCB15F004B8383 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9995B7513BCB15F004B8383 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9995B7A13BCB15F004B8383 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9995B8013BCB15F004B8383 /* SenTestingKit.framework in Frameworks */,
+				A9995B8213BCB15F004B8383 /* UIKit.framework in Frameworks */,
+				A9995B8313BCB15F004B8383 /* Foundation.framework in Frameworks */,
+				A9995B8513BCB15F004B8383 /* CoreGraphics.framework in Frameworks */,
+				A9995B8813BCB15F004B8383 /* libiOSLib.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9995B6613BCB15F004B8383 = {
+			isa = PBXGroup;
+			children = (
+				A9995B7613BCB15F004B8383 /* iOSLib */,
+				A9995B8913BCB15F004B8383 /* iOSLibTests */,
+				A9995B7313BCB15F004B8383 /* Frameworks */,
+				A9995B7213BCB15F004B8383 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9995B7213BCB15F004B8383 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9995B7113BCB15F004B8383 /* libiOSLib.a */,
+				A9995B7E13BCB15F004B8383 /* iOSLibTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9995B7313BCB15F004B8383 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9995B7413BCB15F004B8383 /* Foundation.framework */,
+				A9995B7F13BCB15F004B8383 /* SenTestingKit.framework */,
+				A9995B8113BCB15F004B8383 /* UIKit.framework */,
+				A9995B8413BCB15F004B8383 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9995B7613BCB15F004B8383 /* iOSLib */ = {
+			isa = PBXGroup;
+			children = (
+				A9995B9B13BCB1E0004B8383 /* AGKActivitySpinnerView.h */,
+				A9995B9C13BCB1E0004B8383 /* AGKActivitySpinnerView.m */,
+				A9995B9D13BCB1E0004B8383 /* AGKButtonGroup.h */,
+				A9995B9E13BCB1E0004B8383 /* AGKButtonGroup.m */,
+				A9995BA113BCB1E0004B8383 /* AGKImage.h */,
+				A9995BA213BCB1E0004B8383 /* AGKImage.m */,
+				A9995BA313BCB1E0004B8383 /* AGKImageCache.h */,
+				A9995BA413BCB1E0004B8383 /* AGKImageCache.m */,
+				A9995BA513BCB1E0004B8383 /* AGKOutlineLabel.h */,
+				A9995BA613BCB1E0004B8383 /* AGKOutlineLabel.m */,
+				A9995BA713BCB1E0004B8383 /* AGKRemoteImageCache.h */,
+				A9995BA813BCB1E0004B8383 /* AGKRemoteImageCache.m */,
+				A9995BA913BCB1E0004B8383 /* AGKRemoteImageDiskCache.h */,
+				A9995BAA13BCB1E0004B8383 /* AGKRemoteImageDiskCache.m */,
+				A9995BAB13BCB1E0004B8383 /* AGKRemoteImageView.h */,
+				A9995BAC13BCB1E0004B8383 /* AGKRemoteImageView.m */,
+				A9995BAF13BCB1E0004B8383 /* AGKTextField.h */,
+				A9995BB013BCB1E0004B8383 /* AGKTextField.m */,
+				A9995BB113BCB1E0004B8383 /* CGFunctions.h */,
+				A9995BB213BCB1E0004B8383 /* CGFunctions.m */,
+				A9995BB313BCB1E0004B8383 /* iOSLib.h */,
+				A9995BB413BCB1E0004B8383 /* NSIndexPath+Extras.h */,
+				A9995BB513BCB1E0004B8383 /* NSIndexPath+Extras.m */,
+				A9995BB613BCB1E0004B8383 /* UIAlertView+Extras.h */,
+				A9995BB713BCB1E0004B8383 /* UIAlertView+Extras.m */,
+				A9995BB813BCB1E0004B8383 /* UIButton+Extras.h */,
+				A9995BB913BCB1E0004B8383 /* UIButton+Extras.m */,
+				A9995BBA13BCB1E0004B8383 /* UIColor+Extras.h */,
+				A9995BBB13BCB1E0004B8383 /* UIColor+Extras.m */,
+				A9995BBC13BCB1E0004B8383 /* UIDevice+Extras.h */,
+				A9995BBD13BCB1E0004B8383 /* UIDevice+Extras.m */,
+				A9995BBE13BCB1E0004B8383 /* UIImage+Extras.h */,
+				A9995BBF13BCB1E0004B8383 /* UIImage+Extras.m */,
+				A9995BC013BCB1E0004B8383 /* UIImageView+Extras.h */,
+				A9995BC113BCB1E0004B8383 /* UIImageView+Extras.m */,
+				A9995BC213BCB1E0004B8383 /* UILabel+Extras.h */,
+				A9995BC313BCB1E0004B8383 /* UILabel+Extras.m */,
+				A9995BC413BCB1E0004B8383 /* UITableView+Extras.h */,
+				A9995BC513BCB1E0004B8383 /* UITableView+Extras.m */,
+				A9995BC613BCB1E0004B8383 /* UITextField+Margin.h */,
+				A9995BC713BCB1E0004B8383 /* UITextField+Margin.m */,
+				A9995BC813BCB1E0004B8383 /* UIView+DrawMethods.h */,
+				A9995BC913BCB1E0004B8383 /* UIView+DrawMethods.m */,
+				A9995BCA13BCB1E0004B8383 /* UIView+Extras.h */,
+				A9995BCB13BCB1E0004B8383 /* UIView+Extras.m */,
+				A9995BCC13BCB1E0004B8383 /* UIViewController+Extras.h */,
+				A9995BCD13BCB1E0004B8383 /* UIViewController+Extras.m */,
+				A9995B7713BCB15F004B8383 /* Supporting Files */,
+			);
+			path = iOSLib;
+			sourceTree = "<group>";
+		};
+		A9995B7713BCB15F004B8383 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9995B7813BCB15F004B8383 /* iOSLib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9995B8913BCB15F004B8383 /* iOSLibTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9995B8F13BCB15F004B8383 /* iOSLibTests.h */,
+				A9995B9113BCB15F004B8383 /* iOSLibTests.m */,
+				A9995B8A13BCB15F004B8383 /* Supporting Files */,
+			);
+			path = iOSLibTests;
+			sourceTree = "<group>";
+		};
+		A9995B8A13BCB15F004B8383 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9995B8B13BCB15F004B8383 /* iOSLibTests-Info.plist */,
+				A9995B8C13BCB15F004B8383 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		A9995B6F13BCB15F004B8383 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9995BCE13BCB1E0004B8383 /* AGKActivitySpinnerView.h in Headers */,
+				A9995BD013BCB1E0004B8383 /* AGKButtonGroup.h in Headers */,
+				A9995BD413BCB1E0004B8383 /* AGKImage.h in Headers */,
+				A9995BD613BCB1E0004B8383 /* AGKImageCache.h in Headers */,
+				A9995BD813BCB1E0004B8383 /* AGKOutlineLabel.h in Headers */,
+				A9995BDA13BCB1E0004B8383 /* AGKRemoteImageCache.h in Headers */,
+				A9995BDC13BCB1E0004B8383 /* AGKRemoteImageDiskCache.h in Headers */,
+				A9995BDE13BCB1E0004B8383 /* AGKRemoteImageView.h in Headers */,
+				A9995BE213BCB1E0004B8383 /* AGKTextField.h in Headers */,
+				A9995BE413BCB1E0004B8383 /* CGFunctions.h in Headers */,
+				A9995BE613BCB1E0004B8383 /* iOSLib.h in Headers */,
+				A9995BE713BCB1E0004B8383 /* NSIndexPath+Extras.h in Headers */,
+				A9995BE913BCB1E0004B8383 /* UIAlertView+Extras.h in Headers */,
+				A9995BEB13BCB1E0004B8383 /* UIButton+Extras.h in Headers */,
+				A9995BED13BCB1E0004B8383 /* UIColor+Extras.h in Headers */,
+				A9995BEF13BCB1E0004B8383 /* UIDevice+Extras.h in Headers */,
+				A9995BF113BCB1E0004B8383 /* UIImage+Extras.h in Headers */,
+				A9995BF313BCB1E0004B8383 /* UIImageView+Extras.h in Headers */,
+				A9995BF513BCB1E0004B8383 /* UILabel+Extras.h in Headers */,
+				A9995BF713BCB1E0004B8383 /* UITableView+Extras.h in Headers */,
+				A9995BF913BCB1E0004B8383 /* UITextField+Margin.h in Headers */,
+				A9995BFB13BCB1E0004B8383 /* UIView+DrawMethods.h in Headers */,
+				A9995BFD13BCB1E0004B8383 /* UIView+Extras.h in Headers */,
+				A9995BFF13BCB1E0004B8383 /* UIViewController+Extras.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A9995B7013BCB15F004B8383 /* iOSLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9995B9513BCB15F004B8383 /* Build configuration list for PBXNativeTarget "iOSLib" */;
+			buildPhases = (
+				A9995B6D13BCB15F004B8383 /* Sources */,
+				A9995B6E13BCB15F004B8383 /* Frameworks */,
+				A9995B6F13BCB15F004B8383 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOSLib;
+			productName = iOSLib;
+			productReference = A9995B7113BCB15F004B8383 /* libiOSLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A9995B7D13BCB15F004B8383 /* iOSLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9995B9813BCB15F004B8383 /* Build configuration list for PBXNativeTarget "iOSLibTests" */;
+			buildPhases = (
+				A9995B7913BCB15F004B8383 /* Sources */,
+				A9995B7A13BCB15F004B8383 /* Frameworks */,
+				A9995B7B13BCB15F004B8383 /* Resources */,
+				A9995B7C13BCB15F004B8383 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9995B8713BCB15F004B8383 /* PBXTargetDependency */,
+			);
+			name = iOSLibTests;
+			productName = iOSLibTests;
+			productReference = A9995B7E13BCB15F004B8383 /* iOSLibTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9995B6813BCB15F004B8383 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "AEGIK AB";
+			};
+			buildConfigurationList = A9995B6B13BCB15F004B8383 /* Build configuration list for PBXProject "iOSLib" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A9995B6613BCB15F004B8383;
+			productRefGroup = A9995B7213BCB15F004B8383 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9995B7013BCB15F004B8383 /* iOSLib */,
+				A9995B7D13BCB15F004B8383 /* iOSLibTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9995B7B13BCB15F004B8383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9995B8E13BCB15F004B8383 /* InfoPlist.strings in Resources */,
+				A9995B9013BCB15F004B8383 /* iOSLibTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A9995B7C13BCB15F004B8383 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9995B6D13BCB15F004B8383 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9995BCF13BCB1E0004B8383 /* AGKActivitySpinnerView.m in Sources */,
+				A9995BD113BCB1E0004B8383 /* AGKButtonGroup.m in Sources */,
+				A9995BD513BCB1E0004B8383 /* AGKImage.m in Sources */,
+				A9995BD713BCB1E0004B8383 /* AGKImageCache.m in Sources */,
+				A9995BD913BCB1E0004B8383 /* AGKOutlineLabel.m in Sources */,
+				A9995BDB13BCB1E0004B8383 /* AGKRemoteImageCache.m in Sources */,
+				A9995BDD13BCB1E0004B8383 /* AGKRemoteImageDiskCache.m in Sources */,
+				A9995BDF13BCB1E0004B8383 /* AGKRemoteImageView.m in Sources */,
+				A9995BE313BCB1E0004B8383 /* AGKTextField.m in Sources */,
+				A9995BE513BCB1E0004B8383 /* CGFunctions.m in Sources */,
+				A9995BE813BCB1E0004B8383 /* NSIndexPath+Extras.m in Sources */,
+				A9995BEA13BCB1E0004B8383 /* UIAlertView+Extras.m in Sources */,
+				A9995BEC13BCB1E0004B8383 /* UIButton+Extras.m in Sources */,
+				A9995BEE13BCB1E0004B8383 /* UIColor+Extras.m in Sources */,
+				A9995BF013BCB1E0004B8383 /* UIDevice+Extras.m in Sources */,
+				A9995BF213BCB1E0004B8383 /* UIImage+Extras.m in Sources */,
+				A9995BF413BCB1E0004B8383 /* UIImageView+Extras.m in Sources */,
+				A9995BF613BCB1E0004B8383 /* UILabel+Extras.m in Sources */,
+				A9995BF813BCB1E0004B8383 /* UITableView+Extras.m in Sources */,
+				A9995BFA13BCB1E0004B8383 /* UITextField+Margin.m in Sources */,
+				A9995BFC13BCB1E0004B8383 /* UIView+DrawMethods.m in Sources */,
+				A9995BFE13BCB1E0004B8383 /* UIView+Extras.m in Sources */,
+				A9995C0013BCB1E0004B8383 /* UIViewController+Extras.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9995B7913BCB15F004B8383 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9995B9213BCB15F004B8383 /* iOSLibTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9995B8713BCB15F004B8383 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9995B7013BCB15F004B8383 /* iOSLib */;
+			targetProxy = A9995B8613BCB15F004B8383 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A9995B8C13BCB15F004B8383 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9995B8D13BCB15F004B8383 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9995B9313BCB15F004B8383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A9995B9413BCB15F004B8383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9995B9613BCB15F004B8383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/iOSLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSLib/iOSLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A9995B9713BCB15F004B8383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/iOSLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSLib/iOSLib-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A9995B9913BCB15F004B8383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSLib/iOSLib-Prefix.pch";
+				INFOPLIST_FILE = "iOSLibTests/iOSLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A9995B9A13BCB15F004B8383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iOSLib/iOSLib-Prefix.pch";
+				INFOPLIST_FILE = "iOSLibTests/iOSLibTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9995B6B13BCB15F004B8383 /* Build configuration list for PBXProject "iOSLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9995B9313BCB15F004B8383 /* Debug */,
+				A9995B9413BCB15F004B8383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9995B9513BCB15F004B8383 /* Build configuration list for PBXNativeTarget "iOSLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9995B9613BCB15F004B8383 /* Debug */,
+				A9995B9713BCB15F004B8383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9995B9813BCB15F004B8383 /* Build configuration list for PBXNativeTarget "iOSLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9995B9913BCB15F004B8383 /* Debug */,
+				A9995B9A13BCB15F004B8383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9995B6813BCB15F004B8383 /* Project object */;
+}
