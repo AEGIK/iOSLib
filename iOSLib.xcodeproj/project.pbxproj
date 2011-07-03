@@ -103,6 +103,8 @@
 		A9995C6D13BCB4EF004B8383 /* AGKTCPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C4513BCB4EF004B8383 /* AGKTCPConnection.m */; };
 		A9995C6E13BCB4EF004B8383 /* AGKSecurity.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995C4613BCB4EF004B8383 /* AGKSecurity.h */; };
 		A9995C6F13BCB4EF004B8383 /* AGKSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995C4713BCB4EF004B8383 /* AGKSecurity.m */; };
+		A9995CBC13BCC06F004B8383 /* AGKAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = A9995CBA13BCC06E004B8383 /* AGKAlertView.h */; };
+		A9995CBD13BCC06F004B8383 /* AGKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9995CBB13BCC06E004B8383 /* AGKAlertView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -214,6 +216,8 @@
 		A9995C4513BCB4EF004B8383 /* AGKTCPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGKTCPConnection.m; path = "../cocoa-lib-2/CocoaLib/AGKTCPConnection.m"; sourceTree = "<group>"; };
 		A9995C4613BCB4EF004B8383 /* AGKSecurity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AGKSecurity.h; path = "../cocoa-lib-2/CocoaLib/AGKSecurity.h"; sourceTree = "<group>"; };
 		A9995C4713BCB4EF004B8383 /* AGKSecurity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AGKSecurity.m; path = "../cocoa-lib-2/CocoaLib/AGKSecurity.m"; sourceTree = "<group>"; };
+		A9995CBA13BCC06E004B8383 /* AGKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGKAlertView.h; sourceTree = "<group>"; };
+		A9995CBB13BCC06E004B8383 /* AGKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGKAlertView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +325,8 @@
 				A9995BCB13BCB1E0004B8383 /* UIView+Extras.m */,
 				A9995BCC13BCB1E0004B8383 /* UIViewController+Extras.h */,
 				A9995BCD13BCB1E0004B8383 /* UIViewController+Extras.m */,
+				A9995CBA13BCC06E004B8383 /* AGKAlertView.h */,
+				A9995CBB13BCC06E004B8383 /* AGKAlertView.m */,
 				A9995B7713BCB15F004B8383 /* Supporting Files */,
 			);
 			path = iOSLib;
@@ -451,6 +457,7 @@
 				A9995C6A13BCB4EF004B8383 /* NSDictionary+Extras.h in Headers */,
 				A9995C6C13BCB4EF004B8383 /* AGKTCPConnection.h in Headers */,
 				A9995C6E13BCB4EF004B8383 /* AGKSecurity.h in Headers */,
+				A9995CBC13BCC06F004B8383 /* AGKAlertView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +602,7 @@
 				A9995C6B13BCB4EF004B8383 /* NSDictionary+Extras.m in Sources */,
 				A9995C6D13BCB4EF004B8383 /* AGKTCPConnection.m in Sources */,
 				A9995C6F13BCB4EF004B8383 /* AGKSecurity.m in Sources */,
+				A9995CBD13BCC06F004B8383 /* AGKAlertView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
