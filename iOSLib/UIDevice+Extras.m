@@ -56,3 +56,21 @@
 }
 
 @end
+
+@implementation NSBundle (DeviceExtras)
+- (void)loadNibForCurrentInterfaceIdiomNamed:(NSString *)name owner:(id)owner options:(NSDictionary *)dictionary
+{
+    switch ([[UIDevice currentDevice] userInterfaceIdiom]) {
+        case UIUserInterfaceIdiomPad:
+            [self loadNibNamed:[NSString stringWithFormat:@"%@@iPad", name] owner:owner options:dictionary];       
+            break;
+        case UIUserInterfaceIdiomPhone:
+            [self loadNibNamed:[NSString stringWithFormat:@"%@@iPhone", name] owner:owner options:dictionary];
+            break;
+        default:
+            NSAssert(NO, @"Unknown interface idiom");
+            break;
+    }
+}
+
+@end

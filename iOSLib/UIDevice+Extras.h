@@ -16,3 +16,8 @@
 - (BOOL)isiPod2GOrEarlier;
 - (BOOL)isiPhone3GOrEarlier;
 @end
+
+@interface NSBundle (DeviceExtras)
+- (void)loadNibForCurrentInterfaceIdiomNamed:(NSString *)name owner:(id)owner options:(NSDictionary *)dictionary;
+
+@end
