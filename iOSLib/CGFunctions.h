@@ -25,7 +25,7 @@ CGRect CGRectWithSize(CGSize size);
 void ClipToRoundedCorners(CGContextRef context, CGRect rect, CGFloat cornerRadius);
 void DrawRoundedBorder(CGContextRef context, CGRect rect, CGFloat borderWidth, UIColor *color, CGFloat cornerRadius);
 CGRect CGSizeAspectFill(CGSize sourceSize, CGSize destinationSize);
-CGImageRef CGImageResizeAndModifyWithBlock(CGImageRef image, CGSize size, ContextAction block);
+CGImageRef CreateCGImageResizeAndModifyWithBlock(CGImageRef image, CGSize size, ContextAction block);
 CGSize CGSizeRescale(CGSize size, CGFloat scaleFactor);
 CGImageRef CGImageCreateFromFile(NSString *fullPath, AGKImageType imageType);
 

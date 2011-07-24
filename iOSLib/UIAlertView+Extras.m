@@ -49,13 +49,12 @@
 		va_start(argList, titlesAndActions);
 		lastOtherButton = titlesAndActions;
 		while (lastOtherButton) {
-			AlertAction buttonAction = va_arg(argList, AlertAction);
+			void *buttonAction = va_arg(argList, void *);
 			NSInteger index = [alertView addButtonWithTitle:lastOtherButton];
 			if (buttonAction) {
-				AlertAction actionCopy = [buttonAction copy];
-				[dict setObject:actionCopy forKey:[NSNumber numberWithInteger:index]];
+				[dict setObject:(__bridge AlertAction)buttonAction forKey:[NSNumber numberWithInteger:index]];
 			}
-			lastOtherButton = va_arg(argList, id);
+			lastOtherButton = (__bridge id)va_arg(argList, void *);
 		}
 		va_end(argList);
 	}

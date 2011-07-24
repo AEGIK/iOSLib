@@ -79,7 +79,7 @@
     radius *= ScaleFactor();
     borderWidth *= ScaleFactor();
     CGSize ownSize = CGSizeMake(CGImageGetWidth(CGImage), CGImageGetHeight(CGImage));
-    CGImageRef imageRef = CGImageResizeAndModifyWithBlock(CGImage, size, ^(CGContextRef context) {
+    CGImageRef imageRef = CreateCGImageResizeAndModifyWithBlock(CGImage, size, ^(CGContextRef context) {
         CGRect targetRect = CGSizeAspectFill(ownSize, size);
         CGRect rect = CGRectWithSize(size);
         

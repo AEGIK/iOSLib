@@ -109,7 +109,7 @@ CGRect CGSizeAspectFill(CGSize sourceSize, CGSize destinationSize)
 	return CGRectIntegral(targetRect);
 }
 
-CGImageRef CGImageResizeAndModifyWithBlock(CGImageRef image, CGSize size, ContextAction block)
+CGImageRef CreateCGImageResizeAndModifyWithBlock(CGImageRef image, CGSize size, ContextAction block)
 {
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef context = CGBitmapContextCreate(NULL, (size_t)size.width, (size_t)size.height, 8, 0, colorSpace, kCGImageAlphaPremultipliedLast);

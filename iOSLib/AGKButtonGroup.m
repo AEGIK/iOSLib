@@ -52,15 +52,15 @@
 - (id)initWithButtons:(UIButton *)button1, ...
 {
 	if ((self = [super init])) {
-		UIButton *eachButton;
+		void *eachButton;
 		va_list argumentList;
 		_buttons = [[NSMutableArray alloc] initWithCapacity:5];
 		if (button1) {
 			[_buttons addObject:button1];
 			va_start(argumentList, button1);
-			while ((eachButton = va_arg(argumentList, UIButton *)))
+			while ((eachButton = va_arg(argumentList, void *)))
 			{
-				[_buttons addObject:eachButton];
+				[_buttons addObject:(__bridge UIButton *)eachButton];
 			}
 			va_end(argumentList);
 		}
