@@ -9,23 +9,37 @@
 #import "UIAlertView+Extras.h"
 
 @interface UIAlertViewExtrasDelegate : NSObject<UIAlertViewDelegate>
-@property (nonatomic, strong) NSDictionary *actions;
+@property (nonatomic, retain) NSMutableArray *actions;
+@property (nonatomic, retain) NSMutableArray *alertViews;
 @end
 
 @implementation UIAlertViewExtrasDelegate
 
-@synthesize actions;
+@synthesize actions, alertViews;
+
+- (id)init {
+    if ((self = [super init])) {
+        actions = [[NSMutableArray alloc] initWithCapacity:3];
+        alertViews = [[NSMutableArray alloc] initWithCapacity:3];
+    }
+    return self;
+}
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-	AlertAction action = [[self actions] objectForKey:[NSNumber numberWithInteger:buttonIndex]];
-	if (action) {
+    AlertAction action = [[[self actions] objectAtIndex:0] objectForKey:[NSNumber numberWithInteger:buttonIndex]];
+    [[self actions] removeObjectAtIndex:0];
+    [[self alertViews] removeObjectAtIndex:0];
+    if (action) {
 		action(alertView);
 	}
-	[self setActions:nil];
-    [alertView setDelegate:nil];
+    if ([[self alertViews] count]) {
+        [[[self alertViews] objectAtIndex:0] show];
+    }
 }
 
 @end
+
+static UIAlertViewExtrasDelegate *sharedDelegate = nil;
 
 @implementation UIAlertView(Extras)
 
@@ -35,10 +49,13 @@
 			 cancelButtonAction:(AlertAction)cancelAction
 	otherButtonTitlesAndActions:(id)titlesAndActions, ...
 {
-	UIAlertViewExtrasDelegate *theDelegate = [[UIAlertViewExtrasDelegate alloc] init];
+    if (!sharedDelegate) {
+        sharedDelegate = [[UIAlertViewExtrasDelegate alloc] init];
+    }
+    
 	UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:theTitle 
 														message:theMessage
-													   delegate:theDelegate
+													   delegate:sharedDelegate
 											  cancelButtonTitle:cancelButtonTitle
 											  otherButtonTitles:nil];
 	NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:5];
@@ -49,20 +66,25 @@
 		va_start(argList, titlesAndActions);
 		lastOtherButton = titlesAndActions;
 		while (lastOtherButton) {
-			void *buttonAction = va_arg(argList, void *);
+			AlertAction buttonAction = va_arg(argList, AlertAction);
 			NSInteger index = [alertView addButtonWithTitle:lastOtherButton];
 			if (buttonAction) {
-				[dict setObject:(__bridge AlertAction)buttonAction forKey:[NSNumber numberWithInteger:index]];
+				AlertAction actionCopy = [buttonAction copy];
+				[dict setObject:actionCopy forKey:[NSNumber numberWithInteger:index]];
 			}
-			lastOtherButton = (__bridge id)va_arg(argList, void *);
+			lastOtherButton = va_arg(argList, id);
 		}
 		va_end(argList);
 	}
 	if (cancelButtonTitle && cancelAction) {
-		[dict setObject:cancelAction forKey:[NSNumber numberWithInteger:[alertView cancelButtonIndex]]];
+		AlertAction copy = [cancelAction copy];
+		[dict setObject:copy forKey:[NSNumber numberWithInteger:[alertView cancelButtonIndex]]];
 	}
-	[theDelegate setActions:dict];
-	[alertView show];
+    [[sharedDelegate actions] addObject:dict];
+    [[sharedDelegate alertViews] addObject:alertView];
+    if ([[sharedDelegate actions] count] == 1) {
+        [alertView show];                               
+    }
 	return alertView;
 }
 @end

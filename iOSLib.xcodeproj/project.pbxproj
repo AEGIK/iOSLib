@@ -506,6 +506,7 @@
 		A9995B6813BCB15F004B8383 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "AEGIK AB";
 			};
 			buildConfigurationList = A9995B6B13BCB15F004B8383 /* Build configuration list for PBXProject "iOSLib" */;

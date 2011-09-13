@@ -93,7 +93,10 @@ static __strong AGKAlertView *_currentView = nil;
     [[self alertView] setDelegate:nil];
     _currentView = nil;
     if (selector) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
         [theDelegate performSelector:(SEL)[selector pointerValue] withObject:nil];
+#pragma clang diagnostic pop
     }
 }
 
